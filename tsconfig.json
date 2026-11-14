@@ -7,7 +7,10 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "target": "ESNext",
-    "types": ["node"],
+    "types": [
+      "jest",
+      "node"
+    ],
     // Type Checking
     "strict": true,
     "noUncheckedIndexedAccess": true,
@@ -26,6 +29,12 @@
     "skipLibCheck": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
