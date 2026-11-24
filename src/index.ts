@@ -1,17 +1,5 @@
-/* Basic Node.js server setup */
-import http from 'node:http';
-import logger from 'pino';
-const log = logger();
+import { yarg } from './config/plugins/args.plugin.js';
 
-const hostname = '127.0.0.1';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello, World!\n');
-});
-
-server.listen(port, hostname, () => {
-  log.info(`Server running at http://${hostname}:${port}/`);
-});
+(async () => {
+  console.log(yarg);
+})();
